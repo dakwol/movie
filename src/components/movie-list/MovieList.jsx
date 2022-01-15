@@ -16,8 +16,7 @@ import MovieCard from '../movie-card/MovieCard';
 
 const MovieList = props => {
 
-
-    const [items, setItmes] = useState([]);
+    const [items, setItems] = useState([]);
 
     useEffect(() => {
       const getList = async () => {
@@ -35,7 +34,7 @@ const MovieList = props => {
           } else {
               response = await tmdbApi.similar(props.category, props.id);
           }
-          setItmes(response.results);
+          setItems(response.results);
       }
       getList();
     }, []);

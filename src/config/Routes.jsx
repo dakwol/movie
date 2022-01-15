@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import Home from '../pages/Home';
 import Catalog from '../pages/catalog';
-import Detail from '../pages/Detail';
+import Detail from '../pages/detail/Detail';
 
 const Routes = () => {
     return (
@@ -14,7 +14,7 @@ const Routes = () => {
                 component={Catalog}
             />
             <Route 
-                path='/:category/id' 
+                path='/:category/:id' 
                 component={Detail}
             />
             <Route 
